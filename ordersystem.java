@@ -1,8 +1,10 @@
+
+
 import java.util.Scanner;
 
 public class ordersystem {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner robot = new Scanner(System.in);
         char again;
         double GrandTotal = 0;
 
@@ -24,7 +26,7 @@ public class ordersystem {
             System.out.println("[2] Take out");
             System.out.println("----------------------");
             System.out.print("Enter your choice: ");
-            int TypeOfOrder = sc.nextInt();
+            int TypeOfOrder = robot.nextInt();
 
             // Meals
             System.out.println("\n====== Menu ======");
@@ -38,9 +40,9 @@ public class ordersystem {
             System.out.println("[6] Jolly Hotdog     (55)");
             System.out.println("-------------------------");
             System.out.print("Enter your choice: ");
-            int HappyMeal = sc.nextInt();
+            int HappyMeal = robot.nextInt();
             System.out.print("Enter meal quantity: ");
-            MealQuantity = sc.nextInt();
+            MealQuantity = robot.nextInt();
 
             switch (HappyMeal) {
                 case 1: mealName = "Spaghetti"; mealPrice = 69; break;
@@ -49,22 +51,22 @@ public class ordersystem {
                 case 4: mealName = "Peach Mango Pie"; mealPrice = 55; break;
                 case 5: mealName = "Burger Steak"; mealPrice = 69; break;
                 case 6: mealName = "Jolly Hotdog"; mealPrice = 55; break;
-                default: System.out.println("Invalid meal!"); break;
+         default: System.out       .println("Invalid meal!"); break;
             }
 
             // Drinks size
             System.out.println("\n== DRINKS ==");
             System.out.println(" ");
             System.out.println("== Size of Drinks ==");
-            System.out.println("[1] Regular");
+            System.out.println("[1] Regular (+25)");
             System.out.println("[2] Medium   (+35)");
             System.out.println("[3] Large    (+45)");
             System.out.println("------------------------");
             System.out.print("Enter size: ");
-            int SizeOfDrinks = sc.nextInt();
+            int SizeOfDrinks = robot.nextInt();
 
             switch (SizeOfDrinks) {
-                case 1: sizeName = "Regular"; break;
+                case 1: sizeName = "Regular"; drinkPrice += 25; break;
                 case 2: sizeName = "Medium"; drinkPrice += 35; break;
                 case 3: sizeName = "Large";  drinkPrice += 45; break;
                 default: sizeName = "Unknown"; break;
@@ -79,9 +81,9 @@ public class ordersystem {
             System.out.println("[5] Coke Float   (40)");
             System.out.println("------------------------");
             System.out.print("Enter your choice: ");
-            int TypeOfDrinks = sc.nextInt();
+            int TypeOfDrinks = robot.nextInt();
             System.out.print("Enter drink quantity: ");
-            DrinkQuantity = sc.nextInt();
+            DrinkQuantity = robot.nextInt();
 
             switch (TypeOfDrinks) {
                 case 1: drinkName = "Coke"; drinkPrice += 25; break;
@@ -125,8 +127,10 @@ public class ordersystem {
             System.out.println("================================");
             System.out.println("Thank you, Enjoy your meal!!!");
             System.out.print("\nOrder again? (Yes/No): ");
-            again = sc.next().charAt(0);
+            again = robot.next().charAt(0);
 
         } while (again == 'Y' || again == 'y');
+    
+      robot.close();
     }
 }
