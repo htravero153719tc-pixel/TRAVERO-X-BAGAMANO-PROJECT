@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class ordersystem {
     public static void main(String[] args) {
         Scanner robot = new Scanner(System.in);
-        char again;
+        char again = 'y';
         double GrandTotal = 0;
 
         do {
@@ -28,32 +28,57 @@ public class ordersystem {
             System.out.print("Enter your choice: ");
             int TypeOfOrder = robot.nextInt();
 
-            // Meals
-            System.out.println("\n====== Menu ======");
-            System.out.println(" ");
-            System.out.println("== HAPPY MEAL ==");
-            System.out.println("[1] Spaghetti        (69)");
-            System.out.println("[2] Yum Burger       (42)");
-            System.out.println("[3] Fries            (50)");
-            System.out.println("[4] Peach Mango Pie  (55)");
-            System.out.println("[5] Burger Steak     (69)");
-            System.out.println("[6] Jolly Hotdog     (55)");
-            System.out.println("-------------------------");
-            System.out.print("Enter your choice: ");
-            int HappyMeal = robot.nextInt();
-            System.out.print("Enter meal quantity: ");
-            MealQuantity = robot.nextInt();
+            // Meals// Meals
+System.out.println("\n====== Menu ======");
+System.out.println("== HAPPY MEAL ==");
+System.out.println("[1] Spaghetti        (69)");
+System.out.println("[2] Yum Burger       (42)");
+System.out.println("[3] Fries            (50)");
+System.out.println("[4] Peach Mango Pie  (55)");
+System.out.println("[5] Burger Steak     (69)");
+System.out.println("[6] Jolly Hotdog     (55)");
+System.out.println("-------------------------");
+System.out.print("Enter your choice: ");
+int HappyMeal = robot.nextInt();
 
-            switch (HappyMeal) {
-                case 1: mealName = "Spaghetti"; mealPrice = 69; break;
-                case 2: mealName = "Yum Burger"; mealPrice = 42; break;
-                case 3: mealName = "Fries"; mealPrice = 50; break;
-                case 4: mealName = "Peach Mango Pie"; mealPrice = 55; break;
-                case 5: mealName = "Burger Steak"; mealPrice = 69; break;
-                case 6: mealName = "Jolly Hotdog"; mealPrice = 55; break;
-         default: System.out       .println("Invalid meal!"); break;
-            }
+switch (HappyMeal) {
+    case 1:
+        mealName = "Spaghetti";
+        mealPrice = 69;
+        break;
 
+    case 2:
+        mealName = "Yum Burger";
+        mealPrice = 42;
+        break;
+
+    case 3:
+        mealName = "Fries";
+        mealPrice = 50;
+        break;
+
+    case 4:
+        mealName = "Peach Mango Pie";
+        mealPrice = 55;
+        break;
+
+    case 5:
+        mealName = "Burger Steak";
+        mealPrice = 69;
+        break;
+
+    case 6:
+        mealName = "Jolly Hotdog";
+        mealPrice = 55;
+        break;
+
+    default:
+        System.out.println("Invalid meal!");
+        continue;
+}
+
+System.out.print("Enter meal quantity: ");
+MealQuantity = robot.nextInt();
             // Drinks size
             System.out.println("\n== DRINKS ==");
             System.out.println(" ");
